@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #fafafb;
+    --purple: #9a67ea;
+    --blue-light: #04d4c3;
+    --blue-dark: #2a73c2;
+    --green: #2c7b90; 
+}
+
+body {
+    background: linear-gradient(to bottom, var(--purple), var(--blue-light));
+    height: 100vh;
+    font-family: 'Prompt', sans-serif;
+}
+
+.container {
+    max-width: 80%;
+    width: 400px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+// Aplico los estilos del perfil
+#fecha {
+    color: var(--white);
+    padding: 50px 0 5px 0;
+}
+
+.perfil {
+    h1 {
+        color: var(--white);
+    }
+
+    span {
+        color: var(--white);
+        letter-spacing: 1px;
+    }
+}
+
+// Aplico los estilos de agregar tarea
+.agregar-tarea {
+    background-color: var(--white);
+    margin: 40px 0;
+    border-radius: 15px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 70px;
+
+    input {
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        border: none;
+        background-color: var(--white);
+    }
+    
+    input::placeholder {
+        font-size: 1.1rem;
+        color: var(--purple);
+    }
+
+    i {
+        font-size: 50px;
+        color: var(--purple);
+    }
+
+    i:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+}
+
+// Aplico estilos a la seccion de las tareas
+.seccion-tarea {
+    h3 {
+        color: var(--white);
+        margin-bottom: 20px;
+    }
+
+    li {
+        display: flex;
+        background: linear-gradient(to bottom, var(--blue-dark), var(--green));
+        border-radius: 15px;
+        padding: 10px;
+        margin: 5px 0;
+        align-items: center;
+        justify-content: space-between;
+        color: var(--white);
+    }
+
+    i {
+        font-size: 25px;
+    }
+
+    i:hover {
+        color: var(--blue-light);
+        cursor: pointer;
+    }
+
+}
+
+.seccion-tarea >ul p {
+    font-size: 1.2rem;
+}
+
+// Esta clase, al cliquear el circulo para tickear la tarea, tacha la tarea como completada
+.line-through {
+    text-decoration: line-through;
+    color: var(--blue-light);
+}
